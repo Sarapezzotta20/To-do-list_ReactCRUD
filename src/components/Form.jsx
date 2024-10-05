@@ -1,12 +1,13 @@
 import { useState } from "react";
 
+//library imports
 import { PlusIcon } from "@heroicons/react/24/solid";
 
 const Form = ({ addTask }) => {
   const [task, setTask] = useState("");
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //prevents the browser from refreshing
     addTask({
       name: task,
       checked: false,
